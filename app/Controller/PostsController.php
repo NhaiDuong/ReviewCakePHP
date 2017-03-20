@@ -14,15 +14,7 @@ class PostsController extends AppController {
  *
  * @var array
  */
-	public $components = array('Paginator');
-
-//    public function beforeFilter() {
-//        if ($this->Session->check('Config.language')) {
-//            Configure::write('Config.language', $this->Session->read('Config.language'));
-//        }
-//    }
-
-
+	public $components = array('Paginator', 'Session');
 
 /**
  * index method
@@ -30,12 +22,15 @@ class PostsController extends AppController {
  * @return void
  */
 	public function index() {
-	    //language
-        if ($this->Post->data['Post']['language'] == 'eng'){
-            echo "jasdff";die;
-            $this->Session->write('Config.language', 'eng');
-        }
+//        echo $this->here;
 
+        if (strrchr($this->here,'vie')){
+            $lang = 'vie';
+        }
+        elseif (strrchr($this->here,'eng')){
+            $lang = 'eng';
+        }
+        $this->Session->write('Config.language', $lang);
 		$this->Post->recursive = 0;
 		$this->set('posts', $this->Paginator->paginate());
 	}

@@ -1,9 +1,10 @@
 <div class="posts index">
 	<h2><?php echo __('Posts'); ?></h2>
     <!-- choose language -->
-    <?php echo $this->Form->input('', array(
-                    'options' => array('eng' => 'English', 'vie' => 'VietNamese')));
-    ?>
+    <?php echo $this->Html->link(__('English'),array('language'=>'eng'));?> |
+    <?php echo $this->Html->link(__('VietNamese'),array('language'=>'vie'));?>
+<!--    --><?php //echo $this->Html->link(__('VietNamese'),array('language'=>'vie'),array('target' => '_parent', 'escape' => false));?>
+
 	<table cellpadding="0" cellspacing="0">
 	<thead>
 	<tr>

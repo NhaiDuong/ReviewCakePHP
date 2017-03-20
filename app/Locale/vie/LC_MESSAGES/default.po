@@ -16,228 +16,228 @@ msgstr ""
 #: Errors/error400.ctp:19
 #: Errors/error500.ctp:19
 msgid "Error"
-msgstr ""
+msgstr "Lỗi"
 
 #: Errors/error400.ctp:21
 msgid "The requested address %s was not found on this server."
-msgstr ""
+msgstr "Trang yêu cầu %s không được tìm thấy trên máy chủ này."
 
 #: Errors/error500.ctp:20
 msgid "An Internal Error Has Occurred."
-msgstr ""
+msgstr "Có lỗi xảy ra."
 
 #: Layouts/default.ctp:17
 #: Layouts/error.ctp:17
 msgid "CakePHP: the rapid development php framework"
-msgstr ""
+msgstr "CakePHP: sự phát triển của PHP Framework"
 
 #: Layouts/default.ctp:18
 msgid "CakePHP %s"
-msgstr ""
+msgstr "CakePHP %s"
 
 #: Pages/home.ctp:14
 msgid "Release Notes for CakePHP %s."
-msgstr ""
+msgstr "Phát hành cho CakePhp %s."
 
 #: Pages/home.ctp:16
 msgid "Read the changelog"
-msgstr ""
+msgstr "Xem sự thay đổi"
 
 #: Pages/home.ctp:25
 msgid "URL rewriting is not properly configured on your server."
-msgstr ""
+msgstr "Viết lại URL không được định cấu hình đúng trên máy chủ của bạn"
 
 #: Pages/home.ctp:34
 msgid "Your version of PHP is 5.2.8 or higher."
-msgstr ""
+msgstr "Phiên bản PHP của bạn phải là 5.2.8 hoặc cao hơn."
 
 #: Pages/home.ctp:38
 msgid "Your version of PHP is too low. You need PHP 5.2.8 or higher to use CakePHP."
-msgstr ""
+msgstr "Phiên bản PHP của bạn đã cũ. Bạn cần PHP 5.2.8 hoặc mới hơn để sử dụng CakePhp."
 
 #: Pages/home.ctp:47
 msgid "Your tmp directory is writable."
-msgstr ""
+msgstr "Thư mục tạm thời của bạn có thể sử dụng."
 
 #: Pages/home.ctp:51
 msgid "Your tmp directory is NOT writable."
-msgstr ""
+msgstr "Thư mục tạm thời của bạn hiện không thể sử dụng."
 
 #: Pages/home.ctp:61
 msgid "The %s is being used for core caching. To change the config edit %s"
-msgstr ""
+msgstr "%s đang được sử dụng cho bộ nhớ đệm. Để thay đổi hãy chỉnh sửa cấu hình %s."
 
 #: Pages/home.ctp:65
 msgid "Your cache is NOT working. Please check the settings in %s"
-msgstr ""
+msgstr "Bộ nhớ đệm hiện hông hoặt động. Vui lòng kiểm tra lại cài đặt trong %s."
 
 #: Pages/home.ctp:75
 msgid "Your database configuration file is present."
-msgstr ""
+msgstr "Thư mục cấu hình cơ sở dữ liệu đã được cập nhật."
 
 #: Pages/home.ctp:80
 msgid "Your database configuration file is NOT present."
-msgstr ""
+msgstr "Thư mục cấu hình cơ sở dữ liệu hiện chưa được cập nhật"
 
 #: Pages/home.ctp:82
 msgid "Rename %s to %s"
-msgstr ""
+msgstr "Đổi tên %s thành %s."
 
 #: Pages/home.ctp:107
 msgid "CakePHP is able to connect to the database."
-msgstr ""
+msgstr "CakePHP cho phép kết nối với cơ sở dữ liệu."
 
 #: Pages/home.ctp:111
 msgid "CakePHP is NOT able to connect to the database."
-msgstr ""
+msgstr "CakePHP không cho phép kết nối với cơ sở dữ liệu."
 
 #: Pages/home.ctp:124
 msgid "PCRE has not been compiled with Unicode support."
-msgstr ""
+msgstr "PCRE chưa được biên dịch với bảng mã Unicode."
 
 #: Pages/home.ctp:126
 msgid "Recompile PCRE with Unicode support by adding <code>--enable-unicode-properties</code> when configuring"
-msgstr ""
+msgstr "Biên dịch lại PCRE với hỗ trợ Unicode bằng cách thêm <code> - enable-unicode-properties </ code> khi cấu hình."
 
 #: Pages/home.ctp:135
 msgid "DebugKit plugin is present"
-msgstr ""
+msgstr "Trình cắm DebugKit hiện có"
 
 #: Pages/home.ctp:139
 msgid "DebugKit is not installed. It will help you inspect and debug different aspects of your application."
-msgstr ""
+msgstr "DebugKit chưa được cài đặt. Nó sẽ giúp bạn kiểm tra và gỡ lỗi các khía cạnh khác nhau của ứng dụng của bạn."
 
 #: Pages/home.ctp:141
 msgid "You can install it from %s"
-msgstr ""
+msgstr "Bạn có thể cái nó từ %s"
 
 #: Pages/home.ctp:147
 msgid "Editing this Page"
-msgstr ""
+msgstr "Đang thay đổi trang hiện tại."
 
 #: Pages/home.ctp:150
 msgid "To change the content of this page, edit: %s.<br />\nTo change its layout, edit: %s.<br />\nYou can also add some CSS styles for your pages at: %s."
-msgstr ""
+msgstr "Để thay đổi trang hiện tại, sửa: %s.<br />\n Để thay đổi giao diện, sửa: %s.<br />\n Bạn cũng có thể thêm CSS cho trang web của bạn tại: %s."
 
 #: Pages/home.ctp:157
 msgid "Getting Started"
-msgstr ""
+msgstr "Bắt đầu"
 
 #: Pages/home.ctp:161
 msgid "New"
-msgstr ""
+msgstr "Mới"
 
 #: Pages/home.ctp:161
 msgid "CakePHP 2.0 Docs"
-msgstr ""
+msgstr "Tài liệu CakePHP 2.0"
 
 #: Pages/home.ctp:170
 msgid "The 15 min Blog Tutorial"
-msgstr ""
+msgstr "Hướng dẫn Blog trong 15 phút"
 
 #: Pages/home.ctp:177
 msgid "Official Plugins"
-msgstr ""
+msgstr "Plugins chính thức"
 
 #: Pages/home.ctp:182
 msgid "provides a debugging toolbar and enhanced debugging tools for CakePHP applications."
-msgstr ""
+msgstr "Cung cấp một thanh công cụ gỡ lỗi và các công cụ gỡ lỗi nâng cao cho các ứng dụng CakePHP."
 
 #: Pages/home.ctp:186
 msgid "contains various localized validation classes and translations for specific countries"
-msgstr ""
+msgstr "Chứa các lớp xác nhận dịch ngôn ngữ cho các quốc gia cụ thể"
 
 #: Pages/home.ctp:191
 msgid "More about CakePHP"
-msgstr ""
+msgstr "Hiểu thêm về CakePHP"
 
 #: Pages/home.ctp:193
 msgid "CakePHP is a rapid development framework for PHP which uses commonly known design patterns like Active Record, Association Data Mapping, Front Controller and MVC."
-msgstr ""
+msgstr "CakePHP là một khuôn khổ phát triển nhanh chóng cho PHP sử dụng các mẫu thiết kế phổ biến như Active Record, Association Data Mapping, Front Controller và MVC "
 
 #: Pages/home.ctp:196
 msgid "Our primary goal is to provide a structured framework that enables PHP users at all levels to rapidly develop robust web applications, without any loss to flexibility."
-msgstr ""
+msgstr "Mục tiêu chính của chúng tôi là cung cấp một khuôn khổ có cấu trúc cho phép người sử dụng PHP ở tất cả các cấp độ nhanh chóng phát triển các ứng dụng web mạnh mẽ mà không mất đi tính linh hoạt."
 
 #: Pages/home.ctp:201
 msgid "The Rapid Development Framework"
-msgstr ""
+msgstr "Một Framework phát triển nhanh chóng."
 
 #: Pages/home.ctp:202
 msgid "CakePHP Documentation"
-msgstr ""
+msgstr "Tài liệu CakePHP"
 
 #: Pages/home.ctp:203
 msgid "Your Rapid Development Cookbook"
-msgstr ""
+msgstr "Sách tìm hiểu nhanh sự phát triển"
 
 #: Pages/home.ctp:204
 msgid "CakePHP API"
-msgstr ""
+msgstr "CakePHP API"
 
 #: Pages/home.ctp:205
 msgid "Quick API Reference"
-msgstr ""
+msgstr "Tài liệu tham khảo nhanh API"
 
 #: Pages/home.ctp:206
 msgid "The Bakery"
-msgstr ""
+msgstr "Cửa hàng bánh mì"
 
 #: Pages/home.ctp:207
 msgid "Everything CakePHP"
-msgstr ""
+msgstr "Mọi thứ về CakePHP"
 
 #: Pages/home.ctp:208
 msgid "CakePHP Plugins"
-msgstr ""
+msgstr "CakePHP Plugins"
 
 #: Pages/home.ctp:209
 msgid "A comprehensive list of all CakePHP plugins created by the community"
-msgstr ""
+msgstr "Một danh sách đầy đủ về tất cả các plugin CakePHP được tạo ra bởi cộng đồng"
 
 #: Pages/home.ctp:210
 msgid "CakePHP Community Center"
-msgstr ""
+msgstr "Trung tâm Cộng đồng CakePHP"
 
 #: Pages/home.ctp:211
 msgid "Everything related to the CakePHP community in one place"
-msgstr ""
+msgstr "Mọi thứ liên quan đến cộng đồng CakePHP ở một địa điểm"
 
 #: Pages/home.ctp:214
 msgid "CakePHP Official Forum"
-msgstr ""
+msgstr "Diễn đàn chính thức của CakePHP"
 
 #: Pages/home.ctp:215
 msgid "CakePHP discussion forum"
-msgstr ""
+msgstr "Diễn đàn thảo luận của CakePHP"
 
 #: Pages/home.ctp:217
 msgid "Live chat about CakePHP"
-msgstr ""
+msgstr "Trò chuyện trực tiếp về CakePHP"
 
 #: Pages/home.ctp:218
 msgid "CakePHP Code"
-msgstr ""
+msgstr "Mã nguồn CakePHP"
 
 #: Pages/home.ctp:219
 msgid "Find the CakePHP code on GitHub and contribute to the framework"
-msgstr ""
+msgstr "Tìm mã CakePHP trên GitHub và đóng góp cho framework"
 
 #: Pages/home.ctp:220;221
 msgid "CakePHP Issues"
-msgstr ""
+msgstr "Các vấn đề về CakePHP"
 
 #: Pages/home.ctp:222;223
 msgid "CakePHP Roadmaps"
-msgstr ""
+msgstr "Đường dẫn của CakePHP"
 
 #: Pages/home.ctp:224
 msgid "Training"
-msgstr ""
+msgstr "Đào tạo"
 
 #: Pages/home.ctp:225
 msgid "Join a live session and get skilled with the framework"
-msgstr ""
+msgstr "Tham gia phiên trực tuyến và trải nghiệm với framework"
 
 #: Pages/home.ctp:226
 msgid "CakeFest"
@@ -245,19 +245,19 @@ msgstr ""
 
 #: Pages/home.ctp:227
 msgid "Don't miss our annual CakePHP conference"
-msgstr ""
+msgstr "Đừng bỏ lỡ hội nghị CakePHP hàng năm của chúng tôi"
 
 #: Pages/home.ctp:228
 msgid "Cake Software Foundation"
-msgstr ""
+msgstr "Tổ chức Phần mềm Cake"
 
 #: Pages/home.ctp:229
 msgid "Promoting development related to CakePHP"
-msgstr ""
+msgstr "Thúc đẩy phát triển liên quan đến CakePHP"
 
 #: Posts/add.ctp:4
 msgid "Add Post"
-msgstr ""
+msgstr "Thêm bài viết"
 
 #: Posts/add.ctp:10
 #: Posts/edit.ctp:11
@@ -266,7 +266,7 @@ msgstr ""
 #: Users/admin_edit.ctp:12
 #: Users/edit.ctp:12
 msgid "Submit"
-msgstr ""
+msgstr "Gửi"
 
 #: Posts/add.ctp:13
 #: Posts/edit.ctp:14
@@ -281,18 +281,18 @@ msgstr ""
 #: Users/index.ctp:12;48
 #: Users/view.ctp:37
 msgid "Actions"
-msgstr ""
+msgstr "Thao tác"
 
 #: Posts/add.ctp:16
 #: Posts/edit.ctp:18
 #: Posts/view.ctp:36
 msgid "List Posts"
-msgstr ""
+msgstr "Danh sách bài viết"
 
 #: Posts/edit.ctp:4
 #: Posts/view.ctp:34
 msgid "Edit Post"
-msgstr ""
+msgstr "Sửa bài viết"
 
 #: Posts/edit.ctp:17
 #: Posts/index.ctp:25
@@ -301,7 +301,7 @@ msgstr ""
 #: Users/edit.ctp:18
 #: Users/index.ctp:27
 msgid "Delete"
-msgstr ""
+msgstr "Xóa"
 
 #: Posts/edit.ctp:17
 #: Posts/index.ctp:25
@@ -313,84 +313,84 @@ msgstr ""
 #: Users/index.ctp:27
 #: Users/view.ctp:40
 msgid "Are you sure you want to delete # %s?"
-msgstr ""
+msgstr "Bạn có chắc chắn muốn xóa # %s?"
 
 #: Posts/index.ctp:2
 msgid "Posts"
-msgstr ""
+msgstr "Bài viết"
 
 #: Posts/index.ctp:23
 #: Users/admin_index.ctp:25
 #: Users/index.ctp:25
 msgid "View"
-msgstr ""
+msgstr "Xem"
 
 #: Posts/index.ctp:24
 #: Users/admin_index.ctp:26
 #: Users/index.ctp:26
 msgid "Edit"
-msgstr ""
+msgstr "Sửa"
 
 #: Posts/index.ctp:34
 #: Users/admin_index.ctp:36
 #: Users/index.ctp:36
 msgid "Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}"
-msgstr ""
+msgstr "Trang {:page} của {:pages}"
 
 #: Posts/index.ctp:39
 #: Users/admin_index.ctp:41
 #: Users/index.ctp:41
 msgid "previous"
-msgstr ""
+msgstr "Trước"
 
 #: Posts/index.ctp:41
 #: Users/admin_index.ctp:43
 #: Users/index.ctp:43
 msgid "next"
-msgstr ""
+msgstr "Tiếp"
 
 #: Posts/index.ctp:48
 #: Posts/view.ctp:37
 msgid "New Post"
-msgstr ""
+msgstr "Bài viết mới"
 
 #: Posts/view.ctp:2
 msgid "Post"
-msgstr ""
+msgstr "Bài viết"
 
 #: Posts/view.ctp:4
 #: Users/admin_view.ctp:4
 #: Users/view.ctp:4
 msgid "Id"
-msgstr ""
+msgstr "Mã"
 
 #: Posts/view.ctp:9
 msgid "Title"
-msgstr ""
+msgstr "Tiêu đề"
 
 #: Posts/view.ctp:14
 msgid "Body"
-msgstr ""
+msgstr "Nội dung"
 
 #: Posts/view.ctp:19
 #: Users/admin_view.ctp:24
 #: Users/view.ctp:24
 msgid "Created"
-msgstr ""
+msgstr "Khởi tạo"
 
 #: Posts/view.ctp:24
 #: Users/admin_view.ctp:29
 #: Users/view.ctp:29
 msgid "Modified"
-msgstr ""
+msgstr "Sửa đổi"
 
 #: Posts/view.ctp:35
 msgid "Delete Post"
-msgstr ""
+msgstr "Xóa bài viết"
 
 #: Users/add.ctp:4
 msgid "Add User"
-msgstr ""
+msgstr "Thêm thành viên"
 
 #: Users/add.ctp:19
 #: Users/admin_add.ctp:17
@@ -399,64 +399,67 @@ msgstr ""
 #: Users/edit.ctp:19
 #: Users/view.ctp:41
 msgid "List Users"
-msgstr ""
+msgstr "Danh sách thành viên"
 
 #: Users/admin_add.ctp:4
 msgid "Admin Add User"
-msgstr ""
+msgstr "Thêm thành viên quản lý"
 
 #: Users/admin_edit.ctp:4
 msgid "Admin Edit User"
-msgstr ""
+msgstr "Sửa thành viên quản lý"
 
 #: Users/admin_index.ctp:2
 #: Users/index.ctp:2
 msgid "Users"
-msgstr ""
+msgstr "Thành viên"
 
 #: Users/admin_index.ctp:50
 #: Users/admin_view.ctp:42
 #: Users/index.ctp:50
 #: Users/view.ctp:42
 msgid "New User"
-msgstr ""
+msgstr "Thành viên mới"
 
 #: Users/admin_view.ctp:2
 #: Users/view.ctp:2
 msgid "User"
-msgstr ""
+msgstr "Người dùng"
 
 #: Users/admin_view.ctp:9
 #: Users/view.ctp:9
 msgid "Username"
-msgstr ""
+msgstr "Tên đăng nhập"
 
 #: Users/admin_view.ctp:14
 #: Users/view.ctp:14
 msgid "Password"
-msgstr ""
+msgstr "Mật khẩu"
 
 #: Users/admin_view.ctp:19
 #: Users/view.ctp:19
 msgid "Role"
-msgstr ""
+msgstr "Vai trò"
 
 #: Users/admin_view.ctp:39
 #: Users/edit.ctp:4
 #: Users/view.ctp:39
 msgid "Edit User"
-msgstr ""
+msgstr "Sửa người dùng"
 
 #: Users/admin_view.ctp:40
 #: Users/view.ctp:40
 msgid "Delete User"
-msgstr ""
+msgstr "Xóa người dùng"
 
 #: Users/login.ctp:7
 msgid "Please enter your username and password"
-msgstr ""
+msgstr "Vui lòng nhập tên đăng nhập và mật khẩu"
 
 #: Users/login.ctp:13
 msgid "Login"
-msgstr ""
+msgstr "Đăng nhập"
+
+msgid "VietNamese"
+msgstr "Tiếng Việt"
 

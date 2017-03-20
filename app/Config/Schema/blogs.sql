@@ -8,7 +8,6 @@ CREATE TABLE `blogs`.`posts` (
 	`id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
 	`title` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
 	`body` text CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
-	`language` text CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
 	`created` datetime DEFAULT NULL,
 	`modified` datetime DEFAULT NULL,	PRIMARY KEY  (`id`)) 	DEFAULT CHARSET=latin1,
 	COLLATE=latin1_swedish_ci,

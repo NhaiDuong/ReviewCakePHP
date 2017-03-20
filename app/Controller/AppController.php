@@ -20,6 +20,7 @@
  */
 
 App::uses('Controller', 'Controller');
+App::uses('CakeSession', 'Model/Datasource');
 
 /**
  * Application Controller
@@ -33,6 +34,8 @@ App::uses('Controller', 'Controller');
 class AppController extends Controller {
     public $components = array(
         'Flash',
+        'Session',
+        'Cookie',
         'Auth' => array(
             'loginRedirect' => array(
                 'controller' => 'posts',
@@ -52,8 +55,34 @@ class AppController extends Controller {
     );
 
     public function beforeFilter() {
+//        if ($this->Session->check('Config.language')) {
+//            Configure::write('Config.language', $this->Session->read('Config.language'));
+//        }
+//        $this->Auth->allow('index', 'view', 'en', 'vi');
+        $this->_setLanguage();
         $this->Auth->allow('index', 'view');
     }
+
+    function _setLanguage() {
+        if ($this->Cookie->read('lang') && !$this->Session->check('Config.language')) {
+            $this->Session->write('Config.language', $this->Cookie->read('lang'));
+        }
+        else if (isset($this->params['language']) && ($this->params['language']
+                !=  $this->Session->read('Config.language'))) {
+
+            $this->Session->write('Config.language', $this->params['language']);
+            $this->Cookie->write('lang', $this->params['language'], false, '20 days');
+        }
+    }
+//    public function en() {
+//        $this->Session->write('Config.language', 'eng');
+//        $this->redirect($this->referer());
+//    }
+//
+//    public function vi() {
+//        $this->Session->write('Config.language', 'vie');
+//        $this->redirect($this->referer());
+//    }
 
     public function isAuthorized($user) {
         // Admin can access every action
@@ -64,4 +93,5 @@ class AppController extends Controller {
         // Default deny
         return false;
     }
+
 }

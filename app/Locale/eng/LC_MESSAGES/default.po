@@ -460,3 +460,5 @@ msgstr ""
 msgid "Login"
 msgstr ""
 
+msgid "VietNamese"
+msgstr "VietNamese"
