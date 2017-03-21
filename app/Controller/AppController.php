@@ -55,10 +55,6 @@ class AppController extends Controller {
     );
 
     public function beforeFilter() {
-//        if ($this->Session->check('Config.language')) {
-//            Configure::write('Config.language', $this->Session->read('Config.language'));
-//        }
-//        $this->Auth->allow('index', 'view', 'en', 'vi');
         $this->_setLanguage();
         $this->Auth->allow('index', 'view');
     }
@@ -74,15 +70,6 @@ class AppController extends Controller {
             $this->Cookie->write('lang', $this->params['language'], false, '20 days');
         }
     }
-//    public function en() {
-//        $this->Session->write('Config.language', 'eng');
-//        $this->redirect($this->referer());
-//    }
-//
-//    public function vi() {
-//        $this->Session->write('Config.language', 'vie');
-//        $this->redirect($this->referer());
-//    }
 
     public function isAuthorized($user) {
         // Admin can access every action

@@ -1,16 +1,13 @@
 <div class="users index">
 	<h2><?php echo __('Users'); ?></h2>
-    <!-- choose language -->
-    <?php echo $this->Html->link(__('English'),array('language'=>'eng'),array('target' => '_parent', 'escape' => false));?> |
-    <?php echo $this->Html->link(__('VietNamese'),array('language'=>'vie'),array('target' => '_parent', 'escape' => false));?>
-
-    <table cellpadding="0" cellspacing="0">
+	<table cellpadding="0" cellspacing="0">
 	<thead>
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('username'); ?></th>
 			<th><?php echo $this->Paginator->sort('password'); ?></th>
 			<th><?php echo $this->Paginator->sort('role'); ?></th>
+			<th><?php echo $this->Paginator->sort('dob'); ?></th>
 			<th><?php echo $this->Paginator->sort('created'); ?></th>
 			<th><?php echo $this->Paginator->sort('modified'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
@@ -23,6 +20,7 @@
 		<td><?php echo h($user['User']['username']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['password']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['role']); ?>&nbsp;</td>
+		<td><?php echo h($user['User']['dob']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['created']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['modified']); ?>&nbsp;</td>
 		<td class="actions">

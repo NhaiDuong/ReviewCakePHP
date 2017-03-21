@@ -20,6 +20,8 @@
  */
 
 App::uses('Model', 'Model');
+App::uses('SluggableBehavior', 'Utils.Behavior');
+App::uses('SluggableBehavior', 'Utils/Behavior');
 
 /**
  * Application model for Cake.
@@ -30,4 +32,15 @@ App::uses('Model', 'Model');
  * @package       app.Model
  */
 class AppModel extends Model {
+
+    public $actsAs = array(
+        'Sluggable.Sluggable' => array(
+            'field'     => 'posts.title',  // Field that will be slugged
+            'slug'      => 'slug',  // Field that will be used for the slug
+            'slug_max_length' => 100,
+            'lowercase' => true,    // Do we lowercase the slug ?
+            'separator' => '-',     //
+            'overwrite' => false    // Does the slug is auto generated when field is saved no matter what
+        )
+    );
 }

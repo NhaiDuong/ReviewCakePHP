@@ -4,8 +4,6 @@ App::uses('AppController', 'Controller');
 
 class UsersController extends AppController {
 
-public $components = array('Paginator', 'Session');
-
     public function index() {
         $this->User->recursive = 0;
         $this->set('users', $this->paginate());
@@ -89,5 +87,3 @@ public $components = array('Paginator', 'Session');
     }
 
 }
-
-?>

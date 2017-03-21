@@ -1,0 +1,3 @@
+[submodule "app/Plugin/sluggable"]
+	path = app/Plugin/sluggable
+	url = git://github.com/msadouni/cakephp-sluggable-plugin.git
