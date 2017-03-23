@@ -21,9 +21,7 @@ class PostsController extends AppController {
  *
  * @return void
  */
-	public function index() {
-//        echo $this->here;
-
+	public function index($keyword = null) {
         if (strrchr($this->here,'vie')){
             $lang = 'vie';
         }
@@ -31,6 +29,19 @@ class PostsController extends AppController {
             $lang = 'eng';
         }
         $this->Session->write('Config.language', $lang);
+//
+//       if ($this->request->is('post')){
+//           $keyword = $this->request->data['Post']['keyword'];
+//           var_dump($keyword);die;
+//           $posts = $this->Post->find('all', array('conditions' => array('title like' => '%'.$keyword.'%')));
+//           if (empty($posts)){
+//               $this->set('posts', $posts);
+//           }
+//
+//
+////           pr($posts);
+//       }
+
 		$this->Post->recursive = 0;
 		$this->set('posts', $this->Paginator->paginate());
 	}
@@ -42,13 +53,29 @@ class PostsController extends AppController {
  * @param string $id
  * @return void
  */
-	public function view($id = null) {
-		if (!$this->Post->exists($id)) {
-			throw new NotFoundException(__('Invalid post'));
-		}
-		$options = array('conditions' => array('Post.' . $this->Post->primaryKey => $id));
-		$this->set('post', $this->Post->find('first', $options));
-	}
+
+
+//	public function view($slug) {
+//		if (!$this->Post->exists($slug)) {
+//			throw new NotFoundException(__('Invalid post'));
+//		}
+//		$options = array('conditions' => array('Post.' . $this->Post->data['Post']['slug'] => $slug));
+//		$this->set('post', $this->Post->find('first', $options));
+//	}
+
+
+
+    public function view($slug = null) {
+        if (!$slug) {
+            throw new NotFoundException('Invalid post');
+        }
+        $post = $this->Post->findBySlug($slug);
+        if (!$post) {
+            throw new NotFoundException('Invalid post');
+        }
+        $this->set(compact('post'));
+    }
+
 
 /**
  * add method
@@ -57,7 +84,6 @@ class PostsController extends AppController {
  */
     public function add() {
         if ($this->request->is('post')) {
-            //Added this line
             $this->request->data['Post']['user_id'] = $this->Auth->user('id');
             if ($this->Post->save($this->request->data)) {
                 $this->Flash->success(__('Your post has been saved.'));
@@ -110,4 +136,19 @@ class PostsController extends AppController {
 		}
 		return $this->redirect(array('action' => 'index'));
 	}
+
+    public function search()
+    {
+        if ($this->request->is('post')) {
+            $post = $this->request->data['Post']['title'];
+            $posts = $this->Post->search($post);
+            if(count($posts) > 0) {
+                $this->set('foods', $posts);
+            }
+            else
+            {
+                $this->Flash->set('Không tìm thấy kết quả nào!', array('key'=>'noresult'));
+            }
+        }
+    }
 }

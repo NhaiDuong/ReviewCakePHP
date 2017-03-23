@@ -31,6 +31,17 @@
  */
 	Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
 
+    Router::connect('/:language/:controller/:action/*',array(),array('language' => '[a-z]{3}'));
+
+    Router::connect('/posts/tin-tuc/:slug',
+        array('controller' => 'posts', 'action' => 'view'),
+        array(
+            'slug' => '[a-z0-9-]+', // regex again to ensure a valid slug or 404
+            'pass' => array(
+                'slug', //pass through slug to my controller
+            )
+        ));
+
 /**
  * Load all plugin routes. See the CakePlugin documentation on
  * how to customize the loading of plugin routes.
@@ -42,5 +53,3 @@
  * the built-in default routes.
  */
 	require CAKE . 'Config' . DS . 'routes.php';
-
-Router::connect('/:language/:controller/:action/*',array(),array('language' => '[a-z]{3}'));

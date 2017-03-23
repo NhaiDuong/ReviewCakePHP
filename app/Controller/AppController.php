@@ -32,6 +32,7 @@ App::uses('CakeSession', 'Model/Datasource');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
+    public $layout = 'layout';
     public $components = array(
         'Flash',
         'Session',
@@ -80,5 +81,14 @@ class AppController extends Controller {
         // Default deny
         return false;
     }
+
+    public function redirect( $url, $status = NULL, $exit = true ) {
+        if (!isset($url['language']) && $this->Session->check('Config.language')) {
+            $url['language'] = $this->Session->read('Config.language');
+        }
+        parent::redirect($url,$status,$exit);
+    }
+
+
 
 }
