@@ -30,4 +30,12 @@ class Post extends AppModel {
         ),
     );
 
+    public $findMethods = array('search' => true);
+
+    public function search($post){
+        $posts = $this->find('all', array(
+            'conditions' => array('Post.title' => $post)
+        ));
+        return $posts;
+    }
 }

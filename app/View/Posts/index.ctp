@@ -5,11 +5,9 @@
     <div id="topnav">
       <h1 id="sitename">Blog</h1>
       <ul id="nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="styles.html">Styles</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="#">Notes</a></li>
-<!--        <li><a href="#">Login</a></li>-->
+            <li><a href="index.html">Home</a></li>
+            <li><a href="styles.html">Styles</a></li>
+            <li><a href="blog.html">Blog</a></li>
           <li>
               <?php
                   echo $this->Html->link(
@@ -19,17 +17,32 @@
                   );
               ?>
           </li>
+          <li>
+<!--              --><?php //echo $this->Html->link(__('English'),array('language'=>'eng'));?><!-- |-->
+<!--              --><?php //echo $this->Html->link(__('VietNamese'),array('language'=>'vie'));?>
+          </li>
       </ul>
     </div>
     <div id="header">
       <div id="featuredpost">
         <div id="featuredthumb">
-            <?php echo $this->Html->image('/img/featuredimage.jpg', array('alt' => 'featuredimage', 'class' => 'shadow', 'width' => '200', 'height' => '135'));?>
-<!--            <img src="images/featuredimage.jpg" width="200" height="135" alt="" class="shadow" />-->
+            <?php echo $this->Html->image('/img/featuredimage.jpg',
+                array(
+                    'alt' => 'featuredimage',
+                    'class' => 'shadow',
+                    'width' => '200',
+                    'height' => '135'
+                ));
+            ?>
         </div>
         <div id="featuredcontent">
           <h2><span>Hello World</span></h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit facilisis viverra. Nullam id tristique arcu. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vehicula eros commodo est vestibulum cursus..<span class="readmore"> <a href="#">read more</a></span></p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit facilisis viverra. Nullam id tristique arcu.
+              Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vehicula eros commodo est vestibulum cursus..
+              <span class="readmore">
+                  <a href="#">read more</a>
+              </span>
+          </p>
         </div>
         <div class="clear"></div>
       </div>
@@ -39,30 +52,56 @@
         <div class="post">
             <?php foreach ($posts as $post){ ?>
                   <div class="postleft">
-                    <div class="postdate"> <span class="day"> 30 </span> <span class="month">January</span> </div>
-                    <div class="comments"> <span class="count"><a href="#">0</a></span> </div>
+                        <div class="postdate">
+                            <span class="day">
+                                <?php echo date('d', strtotime($post['Post']['created']));?>
+                            </span>
+                            <span class="month">
+                                <?php echo date('M', strtotime($post['Post']['created']));?>
+                            </span>
+                        </div>
+                        <div class="comments">
+<!--                             <span class="count"><a href="#">0</a></span>-->
+                             <p>
+                                  <?php echo $this->Html->image('/img/view.png', array('alt' => 'view', 'width' => '25', 'height' => '25'));?>
+                                  <a href="#" class="view">
+                                      <?php echo $post['Post']['viewCount'];?>
+                                  </a>
+                             </p>
+                        </div>
                   </div>
                   <div class="postcontent">
                     <div class="postheader">
                       <h2>
-<!--                          --><?php
-//                            echo $this->Html->link(h($post['Post']['title']),
-//                                array(
-//                                    'controller' => 'posts',
-//                                    'action' => 'view',
-//                                    'slug' => $post['Post']['slug']
-//                                ));
-//                          ?>
-                          <a href="/Test1/posts/tin-tuc/<?=$post['Post']['slug'] ?>"><?php echo h($post['Post']['title']);?></a>
+                          <?php
+                          echo $this->Html->link(h($post['Post']['title']), array(
+                              'controller' => 'posts',
+                              'action' => 'view',
+                              'slug' => $post['Post']['slug']
+                          ));
+                          ?>
                       </h2>
                       <span class="postmeta">By Roshan | Filed under CSS Templates</span> </div>
-                    <p><?php echo h($post['Post']['body']); ?><span class="readmore"><a href="/Test1/posts/tin-tuc/<?=$post['Post']['slug'] ?>">Read More</a></span> </p>
+                    <p><?php echo h($post['Post']['body']); ?><span class="readmore">
+                            <?php
+                                echo $this->Html->link(__('Read more'), array(
+                                    'controller' => 'posts',
+                                    'action' => 'view',
+                                    'slug' => $post['Post']['slug']
+                                ));
+                            ?>
+                        </span>
+                    </p>
                   </div>
             <?php } ?>
         </div>
         <div class="pagination clear">
-          <div class="pre"><a href="#">Previous</a></div>
-          <div class="next"><a href="#">Next</a></div>
+          <div class="pre">
+              <?php echo $this->Paginator->prev(__(''), array(), null, array('class' => 'prev disabled')); ?>
+          </div>
+          <div class="next">
+              <?php echo $this->Paginator->next(__(''), array(), null, array('class' => 'next disabled')); ?>
+          </div>
         </div>
       </div>
 
@@ -70,11 +109,10 @@
       <div id="sidebar">
         <div id="search">
           <h2>Search</h2>
-<!--          --><?php //echo $this->Form->create('Search');?>
           <form action="#">
                 <div id="searchfield">
                     <?php echo $this->Form->create('Post');?>
-                    <?php echo $this->Form->input('keyword', array('label' => '')); ?>
+                    <?php echo $this->Form->input('title', array('label' => '')); ?>
                     <?php echo $this->Form->end('Search'); ?>
                 </div>
           </form>

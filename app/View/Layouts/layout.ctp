@@ -9,10 +9,10 @@
         </title>
         <?php
         echo $this->Html->meta('icon');
-        echo $this->Html->css(array('main', 'style', 'myStyle'));
+        echo $this->Html->css(array('main'));
         echo $this->Html->script(array('myScript'));
         echo $this->fetch('meta');
-        echo $this->fetch('css');
+//        echo $this->fetch('css');
         echo $this->fetch('script');
         ?>
     </head>

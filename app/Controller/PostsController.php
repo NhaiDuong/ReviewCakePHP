@@ -41,6 +41,14 @@ class PostsController extends AppController {
 //
 ////           pr($posts);
 //       }
+        $this->Paginator->settings = array(
+            'Post' => array(
+                'paramType' => 'querystring',
+                'limit' => 10,
+                'order' => array('Post.created' => 'desc'
+                )
+            )
+        );
 
 		$this->Post->recursive = 0;
 		$this->set('posts', $this->Paginator->paginate());
@@ -54,17 +62,6 @@ class PostsController extends AppController {
  * @return void
  */
 
-
-//	public function view($slug) {
-//		if (!$this->Post->exists($slug)) {
-//			throw new NotFoundException(__('Invalid post'));
-//		}
-//		$options = array('conditions' => array('Post.' . $this->Post->data['Post']['slug'] => $slug));
-//		$this->set('post', $this->Post->find('first', $options));
-//	}
-
-
-
     public function view($slug = null) {
         if (!$slug) {
             throw new NotFoundException('Invalid post');
@@ -73,6 +70,11 @@ class PostsController extends AppController {
         if (!$post) {
             throw new NotFoundException('Invalid post');
         }
+        $this->Post->updateAll(
+            array('Post.viewCount' => 'Post.viewCount + 1'),
+            array('Post.slug' => $slug)
+
+        );
         $this->set(compact('post'));
     }
 
@@ -137,6 +139,21 @@ class PostsController extends AppController {
 		return $this->redirect(array('action' => 'index'));
 	}
 
+//    public function search()
+//    {
+//        if ($this->request->is('post')) {
+//            $post = $this->request->data['Post']['title'];
+//            $posts = $this->Post->search($post);
+//            if(count($posts) > 0) {
+//                $this->set('foods', $posts);
+//            }
+//            else
+//            {
+//                $this->Flash->set('Không tìm thấy kết quả nào!', array('key'=>'noresult'));
+//            }
+//        }
+//    }
+
     public function search()
     {
         if ($this->request->is('post')) {
@@ -150,5 +167,6 @@ class PostsController extends AppController {
                 $this->Flash->set('Không tìm thấy kết quả nào!', array('key'=>'noresult'));
             }
         }
+        $this->render('index');
     }
 }
